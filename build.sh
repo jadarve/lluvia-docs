@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# install dependencies
+apt update
+apt install -y doxygen
+
 git clone -b master --depth 1 https://github.com/jadarve/lluvia.git
 
 # Generate Doxygen documentation
