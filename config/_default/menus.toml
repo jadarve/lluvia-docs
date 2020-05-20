@@ -7,5 +7,5 @@
 [[main]]
   identifier = "api_cpp"
   name = "C++ API"
-  url = "api/cpp/"
+  url = "api/cpp/index.html"
   weight = 2
