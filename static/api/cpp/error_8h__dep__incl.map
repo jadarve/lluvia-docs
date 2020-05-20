@@ -1,0 +1,16 @@
+<map id="cpp/core/include/lluvia/core/error.h" name="cpp/core/include/lluvia/core/error.h">
+<area shape="rect" id="node2" href="$Buffer_8h.html" title="Buffer class. " alt="" coords="46,95,197,136"/>
+<area shape="rect" id="node3" href="$core_8h.html" title="Lluvia single header for including core classes. " alt="" coords="523,452,674,493"/>
+<area shape="rect" id="node4" href="$ImageDescriptor_8h.html" title="ImageDescriptor class and related enumerations. " alt="" coords="316,184,479,225"/>
+<area shape="rect" id="node8" href="$Interpreter_8h.html" title="Interpreter class. " alt="" coords="221,95,371,136"/>
+<area shape="rect" id="node9" href="$PushConstants_8h.html" title="PushConstants class. " alt="" coords="554,184,710,225"/>
+<area shape="rect" id="node12" href="$types_8h.html" title="Common types. " alt="" coords="691,95,842,136"/>
+<area shape="rect" id="node5" href="$Image_8h.html" title="Image class. " alt="" coords="435,273,586,315"/>
+<area shape="rect" id="node6" href="$ImageView_8h.html" title="ImageView class. " alt="" coords="385,363,535,404"/>
+<area shape="rect" id="node7" href="$Session_8h.html" title="Session class. " alt="" coords="158,363,309,404"/>
+<area shape="rect" id="node10" href="$ComputeNodeDescriptor_8h.html" title="ComputeNodeDescriptor class. " alt="" coords="661,273,872,315"/>
+<area shape="rect" id="node11" href="$ComputeNode_8h.html" title="ComputeNode class. " alt="" coords="713,363,863,404"/>
+<area shape="rect" id="node13" href="$ContainerNodeDescriptor_8h.html" title="ContainerNodeDescriptor class. " alt="" coords="947,273,1160,315"/>
+<area shape="rect" id="node15" href="$utils_8h.html" title="utility functions. " alt="" coords="1083,184,1234,225"/>
+<area shape="rect" id="node14" href="$ContainerNode_8h.html" title="cpp/core/include/lluvia\l/core/ContainerNode.h" alt="" coords="998,363,1151,404"/>
+</map>
