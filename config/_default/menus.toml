@@ -4,3 +4,8 @@
   url = "docs"
   weight = 1
 
+[[main]]
+  identifier = "api_cpp"
+  name = "C++ API"
+  url = "api/cpp"
+  weight = 2
