@@ -192,7 +192,7 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Objects to manage raw portions of allocated memory. </p>
-<p><a class="el" href="classll_1_1Buffer.html" title="Objects to manage raw portions of allocated memory. ">Buffer</a> objects are created by calling <a class="el" href="classll_1_1Memory.html#acb2639d9690fc1ab20b8ffa84b6bdbaf" title="Creates a new ll::Buffer object. ">ll::Memory::createBuffer</a> on a specific memory instance.</p>
+<p><a class="el" href="classll_1_1Buffer.html" title="Objects to manage raw portions of allocated memory. ">Buffer</a> objects are created by calling <a class="el" href="classll_1_1Memory.html#a86e4ee1f5fad6fe73d067aeb6f078391" title="Creates a buffer. ">ll::Memory::createBuffer</a> on a specific memory instance.</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> session = <a class="code" href="classll_1_1Session.html#a6802822c18c7082773ee02d4d2cd8a27">ll::Session::create</a>();</div><div class="line"></div><div class="line"><span class="comment">// device-local memory with page size of 2048 bytes</span></div><div class="line"><span class="keyword">auto</span> memory = session-&gt;createMemory(vk::MemoryPropertyFlagBits::eDeviceLocal, 2048);</div><div class="line"></div><div class="line"><span class="comment">// creates a 128 bytes buffer</span></div><div class="line"><span class="keyword">auto</span> buffer = memory-&gt;createBuffer(128);</div></div><!-- fragment --><p>This object holds a reference to the <a class="el" href="classll_1_1Memory.html" title="Class to manage allocation of objects into a specific type of memory. ">ll::Memory</a> it was created from, guaranteeing the memory is not deleted before this buffer is. Upon destruction of this object, the underlaying memory space is released from the <a class="el" href="classll_1_1Memory.html" title="Class to manage allocation of objects into a specific type of memory. ">ll::Memory</a> instance. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3c217281b81df31ebc466dc8977e0b55"></a>
@@ -370,7 +370,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the size of the buffer in bytes. </p>
-<p>The size returned corresponds to the size requested by the user through <a class="el" href="classll_1_1Memory.html#acb2639d9690fc1ab20b8ffa84b6bdbaf" title="Creates a new ll::Buffer object. ">Memory::createBuffer</a> function. This size does not include padding or alignment bytes.</p>
+<p>The size returned corresponds to the size requested by the user through <a class="el" href="classll_1_1Memory.html#a86e4ee1f5fad6fe73d067aeb6f078391" title="Creates a buffer. ">Memory::createBuffer</a> function. This size does not include padding or alignment bytes.</p>
 <dl class="section return"><dt>Returns</dt><dd>The size of the buffer in bytes. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classll_1_1Buffer.html#a0bcc7480e1162853a913c049fffd6980" title="Gets the allocation information. ">ll::Buffer::getAllocationInfo</a> gets the allocation information. </dd></dl>
 

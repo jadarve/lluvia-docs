@@ -254,31 +254,79 @@ can be sent for execution using the <cite>run</cite> method.</p>
 
 <dl class="py method">
 <dt id="lluvia.core.Session.createComputeNode">
-<code class="sig-name descname">createComputeNode</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">ComputeNodeDescriptor desc</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createComputeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a ComputeNode from a given descriptor.</p>
+<code class="sig-name descname">createComputeNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">desc</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createComputeNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a ComputeNode from a given descriptor or builder name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>desc</strong> (<em>lluvia.ComputeNodeDescriptor</em>) – Compute node descriptor for this node.</p>
+<dd class="field-odd"><p><strong>desc</strong> (<em>string</em><em> or </em><em>lluvia.ComputeNodeDescriptor</em>) – If string, denotes the builder name used to create the ComputeNodeDescriptor for this node.
+Otherwise, a valid lluvia.ComputeNodeDescriptor must be provided.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>node</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>lluvia.ComputeNode</p>
 </dd>
 </dl>
-<p>Returns
-node : lluvia.ComputeNode</p>
+<p>:raises RuntimeError : if desc is a string and the node builder is not found in the registry.:
+:raises ValueError   : if desc type is not string nor ComputeNodeDescriptor.:</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="lluvia.core.Session.createComputeNodeDescriptor">
 <code class="sig-name descname">createComputeNodeDescriptor</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode builderName</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createComputeNodeDescriptor" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Creates a ComputeNodeDescriptor from its name in the registry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>builderName</strong> (<em>string.</em>) – Name of the builder.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>desc</strong> – The descriptor</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>lluvia.ComputeNodeDescriptor.</p>
+</dd>
+</dl>
+<p>:raises RuntimeError : if builderName is not in the registry.:</p>
+</dd></dl>
 
 <dl class="py method">
 <dt id="lluvia.core.Session.createContainerNode">
-<code class="sig-name descname">createContainerNode</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">ContainerNodeDescriptor desc</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createContainerNode" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">createContainerNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">desc</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createContainerNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a ComputeNode from a given descriptor or builder name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>desc</strong> (<em>string</em><em> or </em><em>lluvia.ContainerNodeDescriptor</em>) – If string, denotes the builder name used to create the ContainerNodeDescriptor for this node.
+Otherwise, a valid lluvia.ContainerNodeDescriptor must be provided.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>node</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>lluvia.ComputeNode</p>
+</dd>
+</dl>
+<p>:raises RuntimeError : if desc is a string and the node builder is not found in the registry.:
+:raises ValueError   : if desc type is not string nor ContainerNodeDescriptor.:</p>
+</dd></dl>
 
 <dl class="py method">
 <dt id="lluvia.core.Session.createContainerNodeDescriptor">
 <code class="sig-name descname">createContainerNodeDescriptor</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode builderName</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createContainerNodeDescriptor" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Creates a ContainerNodeDescriptor from its name in the registry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>builderName</strong> (<em>string.</em>) – Name of the builder.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>desc</strong> – The descriptor</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>lluvia.ContainerNodeDescriptor.</p>
+</dd>
+</dl>
+<p>:raises RuntimeError : if builderName is not in the registry.:</p>
+</dd></dl>
 
 <dl class="py method">
 <dt id="lluvia.core.Session.createDuration">
@@ -387,7 +435,20 @@ be used to create uniform buffers to pass to shaders.</p>
 <dl class="py method">
 <dt id="lluvia.core.Session.getProgram">
 <code class="sig-name descname">getProgram</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode name</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.getProgram" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns a program from the registry</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>string.</em>) – Name of the program.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>program</strong> – The program.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>lluvia.Program</p>
+</dd>
+</dl>
+<p>:raises KeyError : if the program does not exists in the registry:</p>
+</dd></dl>
 
 <dl class="py method">
 <dt id="lluvia.core.Session.getSupportedMemoryPropertyFlags">
@@ -424,17 +485,43 @@ by this session.</p>
 <dl class="py method">
 <dt id="lluvia.core.Session.script">
 <code class="sig-name descname">script</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode code</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.script" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Runs a Lua script in the session’s interpreter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>code</strong> (<em>string</em>) – The Lua code.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt id="lluvia.core.Session.scriptFile">
 <code class="sig-name descname">scriptFile</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode filename</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.scriptFile" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Read and run a Lua script file in the session’s interpreter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>code</strong> (<em>string</em>) – Path to the script file.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt id="lluvia.core.Session.setProgram">
-<code class="sig-name descname">setProgram</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode name</em>, <em class="sig-param">Program program</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.setProgram" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">setProgram</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode name</em>, <em class="sig-param">program</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.setProgram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a program into the registry with a given name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – The name of the program in the registry.</p></li>
+<li><p><strong>program</strong> (<em>string</em><em> or </em><em>lluvia.Program.</em>) – If string, this parameter denotes a path to a SPIR-V file used to
+build the program. This is equivalent to call
+<cite>session.setProgram(name, session.createProgram(program))</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – if program’s type is not string nor lluvia.Program:</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
