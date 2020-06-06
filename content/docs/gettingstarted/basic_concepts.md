@@ -149,15 +149,15 @@ node.init()
 # run it on the GPU
 node.run()
 
-print(in_buffer.toHost(dtype=np.float32))
-print(out_buffer.toHost(dtype=np.float32))
+print('in_buffer  : {0}'.format(in_buffer.toHost(dtype=np.float32)))
+print('out_buffer : {0}'.format(out_buffer.toHost(dtype=np.float32)))
 ```
 
 The output is:
 
 ```
-[ 0.  1.  2.  3.  4.  5.  6.  7.]
-[  0.   1.   4.   9.  16.  25.  36.  49.]
+in_buffer  : [ 0.  1.  2.  3.  4.  5.  6.  7.]
+out_buffer : [  0.   1.   4.   9.  16.  25.  36.  49.]
 ```
 
 ## Scripting
@@ -276,12 +276,131 @@ node.run()
 
 out_buffer = node.getPort('out_buffer')
 
-print(in_buffer.toHost(dtype=np.float32))
-print(out_buffer.toHost(dtype=np.float32))
+print('in_buffer  : {0}'.format(in_buffer.toHost(dtype=np.float32)))
+print('out_buffer : {0}'.format(out_buffer.toHost(dtype=np.float32)))
 ```
 
 The two files, `Square.spv` and `Square.lua`, fully describe the instantiation and initialization of the *Square* compute node. Those files can be ported across language as well as across platform without ever changing them. This portability, I believe, is fundamental to move code from a prototyping environment to deployment in production.
 
 ## Node Composition
 
-**TODO**
+Composing several nodes to form a complex algorithm can be achieved using the same Lua scripting interface. As an example, consider chaining the *Square* node *K* times to compute the *x^(2^K)* values of a given array. Lluvia offers a second type of *Node* called **ContainerNode**. Instances of this class can create complex relationships between *ComputeNode* objects to form a compute pipeline. Users can send parameters to the *ContainerNode* during creation to control the initialization process.
+
+The Lua script for creating the **ContainerSquareK** container node looks as follows:
+
+```lua
+local builder = ll.class(ll.ContainerNodeBuilder)
+
+function builder.newDescriptor()
+    local desc = ll.ContainerNodeDescriptor.new()
+
+    desc.builderName = 'ContainerSquareK'
+
+    desc:addPort(ll.PortDescriptor.new(0, 'in_buffer', ll.PortDirection.In, ll.PortType.Buffer))
+    desc:addPort(ll.PortDescriptor.new(1, 'out_buffer', ll.PortDirection.Out, ll.PortType.Buffer))
+
+    -- parameter with default value
+    desc:setParameter('K', 1)
+
+    return desc
+end
+
+
+function builder.onNodeInit(node)
+
+    local K = node:getParameter('K')
+
+    local in_buffer = node:getPort('in_buffer')
+
+    for i = 1, K do
+        
+        square = ll.createComputeNode('Square')
+        
+        square:bind('in_buffer', in_buffer)
+        
+        -- initialize the node, instantiate out_buffer
+        square:init()
+        
+        -- add the square node to the container with name 'square_1', ..., 'square_N'
+        node:bindNode(string.format('square_%d', i), square)
+        
+        in_buffer = square:getPort('out_buffer')
+    end
+    
+    -- bind the output of the last square node as the output of the container
+    node:bind('out_buffer', in_buffer)
+
+end
+
+
+function builder.onNodeRecord(node, cmdBuffer)
+
+    local K = node:getParameter('K')
+    
+
+    for i = 1, K do
+        square = node:getNode(string.format('square_%d', i))
+        
+        -- run the node and wait for it to finish
+        cmdBuffer:run(square)
+        cmdBuffer:memoryBarrier()
+    end
+end
+
+
+ll.registerNodeBuilder('ContainerSquareK', builder)
+```
+
+The `builder` is an instance of `ContainerNodeBuilder`. In `builder.newDescriptor()`, we define a parameter `K` with a default value of `1`. In `builder.onNodeInit(node)`, the value of `K` is read to create a chain of `"Square"` nodes, where the output of the first node is the input to the next one.
+
+Container node builders have an extra method `builder.onNodeRecord(node, cmdBuffer)` used to record the way computations are dispatched to the GPU. In this case, we run each `"square_%d"` node in sequence, waiting for it to finish before running the next one.
+
+Using the container node in Python is straightforward:
+
+```python
+import lluvia as ll
+import numpy as np
+
+# number of elements
+N = 8
+
+session = ll.createSession()
+
+# buffers will be allocated in the GPU
+devMemory = session.createMemory(ll.MemoryPropertyFlagBits.DeviceLocal)
+
+in_buffer = devMemory.createBuffer(N*4)
+in_buffer.fromHost(np.arange(0, N, dtype=np.float32)) # initialize with some values
+
+# Loads the SPIR-V program and makes it available as 'Square'
+session.setProgram('Square', 'Square.spv')
+
+# Runs the lua scripts declaring the compute and container nodes
+session.scriptFile('Square.lua')
+session.scriptFile('ContainerSquareK.lua')
+
+node = session.createContainerNode('ContainerSquareK')
+node.bind('in_buffer', in_buffer)
+node.setParameter('K', ll.Parameter(2))  # repeat twice, compute x^4
+node.init()
+
+node.run()
+
+out_buffer = node.getPort('out_buffer')
+
+print('in_buffer  : {0}'.format(in_buffer.toHost(dtype=np.float32)))
+print('out_buffer : {0}'.format(out_buffer.toHost(dtype=np.float32).astype(np.int32)))
+```
+
+The output is:
+
+```
+in_buffer  : [ 0.  1.  2.  3.  4.  5.  6.  7.]
+out_buffer : [   0    1   16   81  256  625 1296 2401]
+```
+
+Notice how this code is very similar to the one running a single compute node. All the complexity of instantiating and linking the nodes is in the `ContainerSquareK.lua` script. From there, we can take the scripts and deploy them in any platform.
+
+## What's Next
+
+**TODO: coming soon...**
