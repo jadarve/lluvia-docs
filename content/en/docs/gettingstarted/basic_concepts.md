@@ -2,17 +2,36 @@
 title: "Basic Concepts"
 date: 2020-06-02T00:00:00-05:00
 weight: 2
+libraries: ['katex']
 ---
 
 ## The Session
 
 The main object in a Lluvia is an instance of **Session**. Session objects hold a reference to the underlying GPU device used for instantiating memory and running nodes. A Session object lives for as long as their children, even if you lose its reference in your code.
 
+
+{{< tabs tabTotal="2" tabID="1" tabName1="Python" tabName2="C++" >}}
+{{< tab tabNum="1" >}}
+
 ```python
 import lluvia as ll
 
 session = ll.createSession()
 ```
+
+{{< /tab >}}
+{{< tab tabNum="2" >}}
+
+```c++
+#include <lluvia/core.h>
+
+int main() {
+    auto session = ll::Session::create();
+}
+```
+
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Memory
 
@@ -284,7 +303,7 @@ The two files, `Square.spv` and `Square.lua`, fully describe the instantiation a
 
 ## Node Composition
 
-Composing several nodes to form a complex algorithm can be achieved using the same Lua scripting interface. As an example, consider chaining the *Square* node *K* times to compute the *x^(2^K)* values of a given array. Lluvia offers a second type of *Node* called **ContainerNode**. Instances of this class can create complex relationships between *ComputeNode* objects to form a compute pipeline. Users can send parameters to the *ContainerNode* during creation to control the initialization process.
+Composing several nodes to form a complex algorithm can be achieved using the same Lua scripting interface. As an example, consider chaining the *Square* node *K* times to compute the $x^{2^K}$ values of a given array. Lluvia offers a second type of *Node* called **ContainerNode**. Instances of this class can create complex relationships between *ComputeNode* objects to form a compute pipeline. Users can send parameters to the *ContainerNode* during creation to control the initialization process.
 
 The Lua script for creating the **ContainerSquareK** container node looks as follows:
 
