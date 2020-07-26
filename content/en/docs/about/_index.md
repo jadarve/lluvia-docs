@@ -1,9 +1,10 @@
 ---
-title: "Motivation"
+title: "About"
 date: 2020-05-17T00:00:00-05:00
 weight: 1
 collapsible: false
 ---
+
 
 Designing and developing real-time Computer Vision algorithms is a difficult task. On one hand, one needs to formulate the algorithm mathematically in such a way that enables fast calculations on modern compute hardware. On the other hand, such mathematical formulation has to be transformed into machine code, optimized and tested to satisfy system requirements such as hardware usage and frame rate. Accomplishing both tasks successfully is the job of research and engineering teams with highly specialized knowledge.
 
