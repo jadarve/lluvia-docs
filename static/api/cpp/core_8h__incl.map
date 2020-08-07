@@ -1,4 +1,4 @@
-<map id="cpp/core/include/lluvia/core.h" name="cpp/core/include/lluvia/core.h">
+<map id="lluvia/cpp/core/include/lluvia/core.h" name="lluvia/cpp/core/include/lluvia/core.h">
 <area shape="rect" id="node2" href="$Buffer_8h.html" title="Buffer class. " alt="" coords="2423,169,2521,196"/>
 <area shape="rect" id="node3" href="$error_8h.html" title="error related classes and methods. " alt="" coords="941,430,1064,457"/>
 <area shape="rect" id="node13" href="$Memory_8h.html" title="Memory class. " alt="" coords="3761,251,3903,278"/>

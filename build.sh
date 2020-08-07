@@ -19,12 +19,22 @@ mkdir -p static/api
 rsync -av ../lluvia/build/doc/html/ static/api/cpp
 
 # Python documentation
-cd ../lluvia/python/doc
+cd ../lluvia
+CC=clang bazel build //lluvia/python:lluvia_wheel
+pip3 install bazel-bin/lluvia/python/lluvia-0.0.1-py3-none-any.whl -t bazel-bin/lluvia/python/
+cd lluvia/python/doc
 make html
 
 # back to root
-cd ../../../lluvia-docs
-rsync -av ../lluvia/python/doc/build/html/ static/api/python
+cd ../../../../lluvia-docs
+rsync -av ../lluvia/lluvia/python/doc/build/html/ static/api/python
+
+# install Docsy dependencies
+npm install postcss-cli
+npm install autoprefixer
+
+export PATH=~/node_modules/.bin:$PATH
 
 # generate site
+git submodule update --init --recursive --depth 1
 hugo --gc --minify

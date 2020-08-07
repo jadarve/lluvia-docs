@@ -1,4 +1,4 @@
-<map id="cpp/core/include/lluvia/core/utils.h" name="cpp/core/include/lluvia/core/utils.h">
+<map id="lluvia/cpp/core/include/lluvia/core/utils.h" name="lluvia/cpp/core/include/lluvia/core/utils.h">
 <area shape="rect" id="node2" href="$types_8h.html" title="Common types. " alt="" coords="193,95,321,121"/>
 <area shape="rect" id="node5" href="$error_8h.html" title="error related classes and methods. " alt="" coords="259,169,381,196"/>
 <area shape="rect" id="node6" href="$enum__utils_8h.html" title="Utility methods to manipulate enumerations. " alt="" coords="247,244,393,285"/>

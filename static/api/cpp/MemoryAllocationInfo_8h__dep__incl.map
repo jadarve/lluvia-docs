@@ -1,8 +1,8 @@
-<map id="cpp/core/include/lluvia/core/MemoryAllocationInfo.h" name="cpp/core/include/lluvia/core/MemoryAllocationInfo.h">
-<area shape="rect" id="node2" href="$Buffer_8h.html" title="Buffer class. " alt="" coords="57,273,208,315"/>
-<area shape="rect" id="node3" href="$core_8h.html" title="Lluvia single header for including core classes. " alt="" coords="170,363,321,404"/>
-<area shape="rect" id="node4" href="$Image_8h.html" title="Image class. " alt="" coords="360,95,510,136"/>
-<area shape="rect" id="node5" href="$ImageView_8h.html" title="ImageView class. " alt="" coords="360,184,510,225"/>
-<area shape="rect" id="node6" href="$MemoryFreeSpaceManager_8h.html" title="MemoryFreeSpaceManager class. " alt="" coords="81,95,336,136"/>
-<area shape="rect" id="node7" href="$Memory_8h.html" title="Memory class. " alt="" coords="133,184,284,225"/>
+<map id="lluvia/cpp/core/include/lluvia/core/MemoryAllocationInfo.h" name="lluvia/cpp/core/include/lluvia/core/MemoryAllocationInfo.h">
+<area shape="rect" id="node2" href="$Buffer_8h.html" title="Buffer class. " alt="" coords="53,303,203,344"/>
+<area shape="rect" id="node3" href="$core_8h.html" title="Lluvia single header for including core classes. " alt="" coords="166,392,317,433"/>
+<area shape="rect" id="node4" href="$Image_8h.html" title="Image class. " alt="" coords="309,117,459,158"/>
+<area shape="rect" id="node5" href="$ImageView_8h.html" title="ImageView class. " alt="" coords="335,213,500,255"/>
+<area shape="rect" id="node6" href="$MemoryFreeSpaceManager_8h.html" title="MemoryFreeSpaceManager class. " alt="" coords="94,109,285,165"/>
+<area shape="rect" id="node7" href="$Memory_8h.html" title="Memory class. " alt="" coords="109,213,259,255"/>
 </map>

@@ -1,6 +1,6 @@
 ---
 title: "Install Linux"
-date: 2020-05-17T00:00:00-05:00
+date: 2020-08-07T00:00:00-05:00
 weight: 1
 ---
 
@@ -69,15 +69,8 @@ CC=clang bazel test //...
 To build the Python3 package, execute the commands below from the repository's top-level directory. You can create a [virtual environment](https://virtualenv.pypa.io/en/latest/) to isolate the installation:
 
 ```bash
-# build C++ libraries the python wrappers depend on
-CC=clang bazel build //cpp/core:core_cc_library
-CC=clang bazel build @lua//:lua_cc_library
-
-cd python
-pip3 install -r requirements.txt
-
-CC=clang python3 setup.py build bdist_wheel
-pip3 install dist/lluvia-0.0.1-cp36-cp36m-linux_x86_64.whl
+CC=clang bazel build //lluvia/python:lluvia_wheel
+pip3 install bazel-bin/lluvia/python/lluvia-0.0.1-py3-none-any.whl
 ```
 
 Open a Python3 interpreter and import lluvia package

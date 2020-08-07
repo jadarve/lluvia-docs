@@ -1,6 +1,6 @@
-<map id="cpp/core/include/lluvia/core/ImageDescriptor.h" name="cpp/core/include/lluvia/core/ImageDescriptor.h">
-<area shape="rect" id="node2" href="$Image_8h.html" title="Image class. " alt="" coords="56,95,207,136"/>
-<area shape="rect" id="node3" href="$ImageView_8h.html" title="ImageView class. " alt="" coords="5,184,156,225"/>
-<area shape="rect" id="node4" href="$core_8h.html" title="Lluvia single header for including core classes. " alt="" coords="144,273,295,315"/>
-<area shape="rect" id="node5" href="$Session_8h.html" title="Session class. " alt="" coords="283,184,433,225"/>
+<map id="lluvia/cpp/core/include/lluvia/core/ImageDescriptor.h" name="lluvia/cpp/core/include/lluvia/core/ImageDescriptor.h">
+<area shape="rect" id="node2" href="$Image_8h.html" title="Image class. " alt="" coords="70,95,221,136"/>
+<area shape="rect" id="node3" href="$ImageView_8h.html" title="ImageView class. " alt="" coords="5,184,171,225"/>
+<area shape="rect" id="node4" href="$core_8h.html" title="Lluvia single header for including core classes. " alt="" coords="158,273,309,315"/>
+<area shape="rect" id="node5" href="$Session_8h.html" title="Session class. " alt="" coords="297,184,447,225"/>
 </map>
