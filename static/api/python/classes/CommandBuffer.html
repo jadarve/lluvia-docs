@@ -175,7 +175,7 @@
 <em class="property">class </em><code class="sig-prename descclassname">lluvia.core.</code><code class="sig-name descname">CommandBuffer</code><a class="headerlink" href="#lluvia.core.CommandBuffer" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt id="lluvia.core.CommandBuffer.begin">
-<code class="sig-name descname">begin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.begin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">begin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.begin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Begin recording.</p>
 <p>This method should be called before any record operation. Otherwise
 the behaviour is undefined.</p>
@@ -183,7 +183,7 @@ the behaviour is undefined.</p>
 
 <dl class="py method">
 <dt id="lluvia.core.CommandBuffer.changeImageLayout">
-<code class="sig-name descname">changeImageLayout</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Image img</em>, <em class="sig-param">ImageLayout newLayout</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.changeImageLayout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">changeImageLayout</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">img</span></em>, <em class="sig-param"><span class="n">newLayout</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.changeImageLayout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Changes image layout.</p>
 <p>The actual change in image layout is performed when this command buffer
 is submitted to execution. However, calling <cite>image.getLayout()</cite>
@@ -221,13 +221,13 @@ defined in lluvia.ImageLayout:</p>
 
 <dl class="py method">
 <dt id="lluvia.core.CommandBuffer.clearImage">
-<code class="sig-name descname">clearImage</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Image img</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.clearImage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clearImage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">img</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.clearImage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clears the pixels of the image to zero.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="lluvia.core.CommandBuffer.copyBuffer">
-<code class="sig-name descname">copyBuffer</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Buffer src</em>, <em class="sig-param">Buffer dst</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.copyBuffer" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">copyBuffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em>, <em class="sig-param"><span class="n">dst</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.copyBuffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copies src buffer to dst.</p>
 <p>The parameters must satisfy <cite>dst.size &gt;= src.size</cite>.</p>
 <dl class="field-list simple">
@@ -243,7 +243,7 @@ defined in lluvia.ImageLayout:</p>
 
 <dl class="py method">
 <dt id="lluvia.core.CommandBuffer.copyBufferToImage">
-<code class="sig-name descname">copyBufferToImage</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Buffer src</em>, <em class="sig-param">Image dst</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.copyBufferToImage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">copyBufferToImage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em>, <em class="sig-param"><span class="n">dst</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.copyBufferToImage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copies the content of src Buffer to dst Image</p>
 <p>No size check is currently being tested.</p>
 <dl class="field-list simple">
@@ -258,7 +258,7 @@ defined in lluvia.ImageLayout:</p>
 
 <dl class="py method">
 <dt id="lluvia.core.CommandBuffer.copyImageToBuffer">
-<code class="sig-name descname">copyImageToBuffer</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Image src</em>, <em class="sig-param">Buffer dst</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.copyImageToBuffer" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">copyImageToBuffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em>, <em class="sig-param"><span class="n">dst</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.copyImageToBuffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copies the content of src Image to dst Buffer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -272,7 +272,7 @@ defined in lluvia.ImageLayout:</p>
 
 <dl class="py method">
 <dt id="lluvia.core.CommandBuffer.copyImageToImage">
-<code class="sig-name descname">copyImageToImage</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Image src</em>, <em class="sig-param">Image dst</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.copyImageToImage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">copyImageToImage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em>, <em class="sig-param"><span class="n">dst</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.copyImageToImage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copies the content of src Image to dst Image.</p>
 <p>The image parameters must be in the following layouts:</p>
 <ul class="simple">
@@ -294,7 +294,7 @@ any other layout.</p>
 
 <dl class="py method">
 <dt id="lluvia.core.CommandBuffer.durationEnd">
-<code class="sig-name descname">durationEnd</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Duration d</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.durationEnd" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">durationEnd</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.durationEnd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops recording the elapsed time between two points.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -305,7 +305,7 @@ any other layout.</p>
 
 <dl class="py method">
 <dt id="lluvia.core.CommandBuffer.durationStart">
-<code class="sig-name descname">durationStart</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Duration d</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.durationStart" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">durationStart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.durationStart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts recording the elapsed time between two points.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -316,7 +316,7 @@ any other layout.</p>
 
 <dl class="py method">
 <dt id="lluvia.core.CommandBuffer.end">
-<code class="sig-name descname">end</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.end" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">end</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.end" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ends recording.</p>
 <p>Any following call to recording methods after this call have undefined
 behavior.</p>
@@ -324,14 +324,14 @@ behavior.</p>
 
 <dl class="py method">
 <dt id="lluvia.core.CommandBuffer.memoryBarrier">
-<code class="sig-name descname">memoryBarrier</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.memoryBarrier" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">memoryBarrier</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.memoryBarrier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inserts a memory barrier.</p>
 <p>TODO: details.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="lluvia.core.CommandBuffer.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">ComputeNode node</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.run" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.CommandBuffer.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Records running a compute node.</p>
 <p>This operation uses node.grid to dispatch the compute shader. After
 the call of this method, node.grid can be changed to a new value.</p>

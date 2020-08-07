@@ -1,4 +1,4 @@
-<map id="cpp/core/include/lluvia/core/Memory.h" name="cpp/core/include/lluvia/core/Memory.h">
+<map id="lluvia/cpp/core/include/lluvia/core/Memory.h" name="lluvia/cpp/core/include/lluvia/core/Memory.h">
 <area shape="rect" id="node9" href="$MemoryFreeSpaceManager_8h.html" title="MemoryFreeSpaceManager class. " alt="" coords="253,95,440,136"/>
 <area shape="rect" id="node12" href="$enum__utils_8h.html" title="Utility methods to manipulate enumerations. " alt="" coords="757,95,902,136"/>
 <area shape="rect" id="node11" href="$MemoryAllocationInfo_8h.html" title="Structures and methods for storing memory allocation information. " alt="" coords="149,184,339,225"/>

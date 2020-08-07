@@ -1,4 +1,4 @@
-<map id="cpp/core/include/lluvia/core/ContainerNode.h" name="cpp/core/include/lluvia/core/ContainerNode.h">
+<map id="lluvia/cpp/core/include/lluvia/core/ContainerNode.h" name="lluvia/cpp/core/include/lluvia/core/ContainerNode.h">
 <area shape="rect" id="node2" href="$Node_8h.html" title="Node class and related enums. " alt="" coords="238,184,365,211"/>
 <area shape="rect" id="node13" href="$ContainerNodeDescriptor_8h.html" title="ContainerNodeDescriptor class. " alt="" coords="469,95,641,136"/>
 <area shape="rect" id="node3" href="$enum__utils_8h.html" title="Utility methods to manipulate enumerations. " alt="" coords="475,333,621,375"/>

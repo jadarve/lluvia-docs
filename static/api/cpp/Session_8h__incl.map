@@ -1,4 +1,4 @@
-<map id="cpp/core/include/lluvia/core/Session.h" name="cpp/core/include/lluvia/core/Session.h">
+<map id="lluvia/cpp/core/include/lluvia/core/Session.h" name="lluvia/cpp/core/include/lluvia/core/Session.h">
 <area shape="rect" id="node10" href="$ImageDescriptor_8h.html" title="ImageDescriptor class and related enumerations. " alt="" coords="379,95,571,121"/>
 <area shape="rect" id="node11" href="$error_8h.html" title="error related classes and methods. " alt="" coords="556,244,679,271"/>
 <area shape="rect" id="node12" href="$enum__utils_8h.html" title="Utility methods to manipulate enumerations. " alt="" coords="398,319,543,360"/>
