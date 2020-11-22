@@ -54,13 +54,13 @@ Clone and compile Lluvia's C++ libraries:
 git clone https://github.com/jadarve/lluvia.git
 
 cd lluvia
-CC=clang bazel build //cpp/...
+CC=clang bazel build //lluvia/cpp/...
 ```
 
 Run the tests to verify that your compilation runs properly:
 
 ```bash
-CC=clang bazel test //...
+CC=clang bazel test //lluvia/cpp/...
 ```
 
 
@@ -70,6 +70,7 @@ To build the Python3 package, execute the commands below from the repository's t
 
 ```bash
 CC=clang bazel build //lluvia/python:lluvia_wheel
+CC=clang bazel test //lluvia/test/...
 pip3 install bazel-bin/lluvia/python/lluvia-0.0.1-py3-none-any.whl
 ```
 
