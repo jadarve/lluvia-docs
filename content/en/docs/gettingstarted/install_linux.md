@@ -70,7 +70,7 @@ To build the Python3 package, execute the commands below from the repository's t
 
 ```bash
 CC=clang bazel build //lluvia/python:lluvia_wheel
-CC=clang bazel test //lluvia/test/...
+CC=clang bazel test //lluvia/python/test/...
 pip3 install bazel-bin/lluvia/python/lluvia-0.0.1-py3-none-any.whl
 ```
 
