@@ -36,7 +36,9 @@ var hierarchy =
     [ "ll::PortDescriptor", "structll_1_1PortDescriptor.html", null ],
     [ "ll::Program", "classll_1_1Program.html", null ],
     [ "ll::PushConstants", "classll_1_1PushConstants.html", null ],
+    [ "ll::SessionDescriptor", "classll_1_1SessionDescriptor.html", null ],
     [ "ll::vec3< T >", "structll_1_1vec3.html", null ],
     [ "ll::vec3< uint32_t >", "structll_1_1vec3.html", null ],
-    [ "ll::VkHeapInfo", "structll_1_1VkHeapInfo.html", null ]
+    [ "ll::VkHeapInfo", "structll_1_1VkHeapInfo.html", null ],
+    [ "ll::impl::ZipArchive", "classll_1_1impl_1_1ZipArchive.html", null ]
 ];

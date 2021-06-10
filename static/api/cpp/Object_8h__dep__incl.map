@@ -1,6 +1,7 @@
 <map id="lluvia/cpp/core/include/lluvia/core/Object.h" name="lluvia/cpp/core/include/lluvia/core/Object.h">
-<area shape="rect" id="node2" href="$Buffer_8h.html" title="Buffer class. " alt="" coords="5,184,156,225"/>
-<area shape="rect" id="node4" href="$Image_8h.html" title="Image class. " alt="" coords="120,95,271,136"/>
-<area shape="rect" id="node5" href="$ImageView_8h.html" title="ImageView class. " alt="" coords="231,184,397,225"/>
-<area shape="rect" id="node3" href="$core_8h.html" title="Lluvia single header for including core classes. " alt="" coords="119,273,269,315"/>
+<area shape="rect" id="node1" title="Object class and related enums." alt="" coords="120,5,271,47"/>
+<area shape="rect" id="node2" href="$Buffer_8h.html" title="Buffer class." alt="" coords="5,184,156,225"/>
+<area shape="rect" id="node4" href="$Image_8h.html" title="Image class." alt="" coords="120,95,271,136"/>
+<area shape="rect" id="node5" href="$ImageView_8h.html" title="ImageView class." alt="" coords="231,184,394,225"/>
+<area shape="rect" id="node3" href="$core_8h.html" title="Lluvia single header for including core classes." alt="" coords="119,273,269,315"/>
 </map>

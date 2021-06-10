@@ -6,6 +6,7 @@ var dir_bc855b56c2ee3be9d686b09ebec57028 =
     [ "CommandBuffer.h", "CommandBuffer_8h.html", [
       [ "CommandBuffer", "classll_1_1CommandBuffer.html", "classll_1_1CommandBuffer" ]
     ] ],
+    [ "ComputeDimension.h", "ComputeDimension_8h.html", "ComputeDimension_8h" ],
     [ "ComputeNode.h", "ComputeNode_8h.html", [
       [ "ComputeNode", "classll_1_1ComputeNode.html", "classll_1_1ComputeNode" ]
     ] ],
@@ -18,6 +19,7 @@ var dir_bc855b56c2ee3be9d686b09ebec57028 =
     [ "ContainerNodeDescriptor.h", "ContainerNodeDescriptor_8h.html", [
       [ "ContainerNodeDescriptor", "classll_1_1ContainerNodeDescriptor.html", "classll_1_1ContainerNodeDescriptor" ]
     ] ],
+    [ "debug_utils.h", "debug__utils_8h.html", "debug__utils_8h" ],
     [ "Duration.h", "Duration_8h.html", [
       [ "Duration", "classll_1_1Duration.html", "classll_1_1Duration" ]
     ] ],
@@ -42,6 +44,9 @@ var dir_bc855b56c2ee3be9d686b09ebec57028 =
     ] ],
     [ "Session.h", "Session_8h.html", [
       [ "Session", "classll_1_1Session.html", "classll_1_1Session" ]
+    ] ],
+    [ "SessionDescriptor.h", "SessionDescriptor_8h.html", [
+      [ "SessionDescriptor", "classll_1_1SessionDescriptor.html", "classll_1_1SessionDescriptor" ]
     ] ],
     [ "types.h", "types_8h.html", "types_8h" ],
     [ "utils.h", "utils_8h.html", "utils_8h" ]

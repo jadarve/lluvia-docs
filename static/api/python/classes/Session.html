@@ -1,38 +1,44 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Session &mdash; lluvia 0.0.1 documentation</title>
   
 
   
-  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Enumerations" href="../enumerations/index.html" />
@@ -73,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -107,6 +114,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -141,11 +149,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="index.html">Classes</a> &raquo;</li>
         
@@ -154,7 +164,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/classes/Session.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -170,361 +180,6 @@
             
   <div class="section" id="session">
 <h1>Session<a class="headerlink" href="#session" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt id="lluvia.core.Session">
-<em class="property">class </em><code class="sig-prename descclassname">lluvia.core.</code><code class="sig-name descname">Session</code><a class="headerlink" href="#lluvia.core.Session" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="py method">
-<dt id="lluvia.core.Session.compileComputeNode">
-<code class="sig-name descname">compileComputeNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">ports</span></em>, <em class="sig-param"><span class="n">shaderCode</span></em>, <em class="sig-param"><span class="n">functionName</span><span class="o">=</span><span class="default_value">'main'</span></em>, <em class="sig-param"><span class="n">builderName</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">localSize</span><span class="o">=</span><span class="default_value">1, 1, 1</span></em>, <em class="sig-param"><span class="n">gridSize</span><span class="o">=</span><span class="default_value">1, 1, 1</span></em>, <em class="sig-param"><span class="n">includeDirs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compileFlags</span><span class="o">=</span><span class="default_value">['-Werror']</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.compileComputeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compiles a ComputeNode from GLSL shader code.</p>
-<p>This method assumes that glslc command is avialable in the system.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ports</strong> (<em>list of PortDescriptor.</em>) – List of port descriptors the compute node receives.</p></li>
-<li><p><strong>shaderCode</strong> (<em>file</em><em> or </em><em>str.</em>) – <p>If file, it must contain the GLSL code of the shader to compile.
-The file is not closed during the execution of this method.</p>
-<p>If str,  it must be valid GLSL code. A temporal file is created and
-its path is passed to glslc for compilation.</p>
-</p></li>
-<li><p><strong>functionName</strong> (<em>str. Defaults to 'main'.</em>) – Function name whitin the shader the compute node will execute.</p></li>
-<li><p><strong>builderName</strong> (<em>str. Defaults to ''</em><em> (</em><em>empty string</em><em>)</em><em></em>) – Builder name associated to this node.</p></li>
-<li><p><strong>localSize</strong> (<em>list</em><em> or </em><em>tuple of length 3. Defaults to</em><em> (</em><em>1</em><em>, </em><em>1</em><em>, </em><em>1</em><em>)</em><em></em>) – Local group size for each XYZ dimension. Each value
-must be greater or equal to 1.</p></li>
-<li><p><strong>gridSize</strong> (<em>list</em><em> or </em><em>tuple of length 3. Defaults to</em><em> (</em><em>1</em><em>, </em><em>1</em><em>, </em><em>1</em><em>)</em><em></em>) – Grid size for each XYZ dimension. The grid size defines
-the number of local groups in each dimension. Each value
-must be greater or equal to 1.</p></li>
-<li><p><strong>includeDirs</strong> (<em>list of strings. Defaults to None.</em>) – List of include directories to pass to glslc through -I flag.</p></li>
-<li><p><strong>compileFlags</strong> (<em>list of strings. Defaults to</em><em> [</em><em>'-Werror'</em><em>]</em><em></em>) – Extra compile flags to pass to glslc.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>node</strong> – Compiled node.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>lluvia.ComputeNode.</p>
-</dd>
-</dl>
-<p>:raises RuntimeError : if the compilation fails.:</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<dl class="simple">
-<dt><a class="reference internal" href="#lluvia.core.Session.compileProgram" title="lluvia.core.Session.compileProgram"><code class="xref py py-meth docutils literal notranslate"><span class="pre">compileProgram()</span></code></a></dt><dd><p>Compiles a Program from GLSL shader code.</p>
-</dd>
-</dl>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.compileProgram">
-<code class="sig-name descname">compileProgram</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">shaderCode</span></em>, <em class="sig-param"><span class="n">includeDirs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compileFlags</span><span class="o">=</span><span class="default_value">['-Werror']</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.compileProgram" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compiles a Program from GLSL shader code.</p>
-<p>This method assumes that glslc command is avialable in the system.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>shaderCode</strong> (<em>file</em><em> or </em><em>str.</em>) – <p>If file, it must contain the GLSL code of the shader to compile.
-The file is not closed during the execution of this method.</p>
-<p>If str,  it must be valid GLSL code. A temporal file is created and
-its path is passed to glslc for compilation.</p>
-</p></li>
-<li><p><strong>includeDirs</strong> (<em>list of strings. Defaults to None.</em>) – List of include directories to pass to glslc through -I flag.</p></li>
-<li><p><strong>compileFlags</strong> (<em>list of strings. Defaults to</em><em> [</em><em>'-Werror'</em><em>]</em><em></em>) – Extra compile flags to pass to glslc.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>program</strong> – Compiled program.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>lluvia.Program.</p>
-</dd>
-</dl>
-<p>:raises RuntimeError : if the compilation fails.:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.createCommandBuffer">
-<code class="sig-name descname">createCommandBuffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createCommandBuffer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a command buffer object.</p>
-<p>Command buffers are used to record commands to be executed
-by the device. Once the recording finishes, the command buffer
-can be sent for execution using the <cite>run</cite> method.</p>
-<p>:raises RuntimeError : if the command buffer cannot be created.:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.createComputeNode">
-<code class="sig-name descname">createComputeNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">desc</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createComputeNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a ComputeNode from a given descriptor or builder name.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>desc</strong> (<em>string</em><em> or </em><em>lluvia.ComputeNodeDescriptor</em>) – If string, denotes the builder name used to create the ComputeNodeDescriptor for this node.
-Otherwise, a valid lluvia.ComputeNodeDescriptor must be provided.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>node</strong></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>lluvia.ComputeNode</p>
-</dd>
-</dl>
-<p>:raises RuntimeError : if desc is a string and the node builder is not found in the registry.:
-:raises ValueError   : if desc type is not string nor ComputeNodeDescriptor.:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.createComputeNodeDescriptor">
-<code class="sig-name descname">createComputeNodeDescriptor</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode builderName</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createComputeNodeDescriptor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a ComputeNodeDescriptor from its name in the registry.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>builderName</strong> (<em>string.</em>) – Name of the builder.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>desc</strong> – The descriptor</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>lluvia.ComputeNodeDescriptor.</p>
-</dd>
-</dl>
-<p>:raises RuntimeError : if builderName is not in the registry.:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.createContainerNode">
-<code class="sig-name descname">createContainerNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">desc</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createContainerNode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a ComputeNode from a given descriptor or builder name.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>desc</strong> (<em>string</em><em> or </em><em>lluvia.ContainerNodeDescriptor</em>) – If string, denotes the builder name used to create the ContainerNodeDescriptor for this node.
-Otherwise, a valid lluvia.ContainerNodeDescriptor must be provided.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>node</strong></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>lluvia.ComputeNode</p>
-</dd>
-</dl>
-<p>:raises RuntimeError : if desc is a string and the node builder is not found in the registry.:
-:raises ValueError   : if desc type is not string nor ContainerNodeDescriptor.:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.createContainerNodeDescriptor">
-<code class="sig-name descname">createContainerNodeDescriptor</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode builderName</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createContainerNodeDescriptor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a ContainerNodeDescriptor from its name in the registry.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>builderName</strong> (<em>string.</em>) – Name of the builder.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>desc</strong> – The descriptor</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>lluvia.ContainerNodeDescriptor.</p>
-</dd>
-</dl>
-<p>:raises RuntimeError : if builderName is not in the registry.:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.createDuration">
-<code class="sig-name descname">createDuration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createDuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a Duration object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>d</strong> – A new Duration object.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>ll.Duration.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.createMemory">
-<code class="sig-name descname">createMemory</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">flags=MemoryPropertyFlagBits.DeviceLocal</em>, <em class="sig-param">uint64_t pageSize=33554432</em>, <em class="sig-param">bool exactFlagsMatch=False</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createMemory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new memory.</p>
-<dl>
-<dt><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a></dt><dd><p>import lluvia as ll</p>
-<p>session = ll.createSession()
-memory = session.createMemory([ll.MemoryPropertyFlagBits.HostVisible,</p>
-<blockquote>
-<div><blockquote>
-<div><p>ll.MemoryPropertyFlagBits.HostCoherent],</p>
-</div></blockquote>
-<p>4096, False)</p>
-</div></blockquote>
-</dd>
-</dl>
-<p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
-<p>The flags parameter can contain one string or a list of strings
-specifying the memory property flags the new memory will be created
-with. The possible values are defined in lluvia.MemoryPropertyFlagBits:</p>
-<ul class="simple">
-<li><p>DeviceLocal</p></li>
-<li><p>HostCached</p></li>
-<li><p>HostCoherent</p></li>
-<li><p>HostVisible</p></li>
-<li><p>LazilyAllocated</p></li>
-</ul>
-<p>See <a class="reference external" href="https://www.khronos.org/registry/vulkan/specs/1.0/html/vkspec.html#VkMemoryPropertyFlagBits">https://www.khronos.org/registry/vulkan/specs/1.0/html/vkspec.html#VkMemoryPropertyFlagBits</a> for more information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>flags</strong> (<em>string</em><em> or </em><em>list of strings. Defaults to 'DeviceLocal'</em>) – Flags to determine the type of memory to be created.
-Each flag should be one of the strings in
-lluvia.MemoryPropertyFlags.</p></li>
-<li><p><strong>pageSize</strong> (<em>uint64_t. Defaults to 32MB</em><em> (</em><em>33554432L</em><em>)</em><em></em>) – The size in bytes of each page the new memory object
-will allocate when there is no space for creating new objects.</p></li>
-<li><p><strong>exactFlagsMatch</strong> (<em>bool defaults to False.</em>) – Tells whether or not flags should match exactly one of
-the values in lluvia.Session.getSupportedMemoryFlags()
-or if it is enough that it contains at least the flags values.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>memory</strong></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>a new lluvia.Memory object.</p>
-</dd>
-</dl>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<dl class="simple">
-<dt><a class="reference internal" href="#lluvia.core.Session.getSupportedMemoryPropertyFlags" title="lluvia.core.Session.getSupportedMemoryPropertyFlags"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getSupportedMemoryPropertyFlags()</span></code></a></dt><dd><p>Returns the supported memory property flags for creating memories in this session.</p>
-</dd>
-</dl>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.createProgram">
-<code class="sig-name descname">createProgram</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode path</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.createProgram" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a Program object reading the SPIR-V code from a given file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>path</strong> (<em>string</em>) – path to the file where the SPIR-V code is stored.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>program</strong></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>lluvia.Program</p>
-</dd>
-</dl>
-<p>:raises IOError : if there is any problem reading the file at the given path.:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.getHostMemory">
-<code class="sig-name descname">getHostMemory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.getHostMemory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a memory object that is HOST_LOCAL and HOST_COHERENT. This memory can
-be used to create uniform buffers to pass to shaders.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>mem</strong></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>ll.Memory</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.getProgram">
-<code class="sig-name descname">getProgram</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode name</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.getProgram" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a program from the registry</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>string.</em>) – Name of the program.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>program</strong> – The program.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>lluvia.Program</p>
-</dd>
-</dl>
-<p>:raises KeyError : if the program does not exists in the registry:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.getSupportedMemoryPropertyFlags">
-<code class="sig-name descname">getSupportedMemoryPropertyFlags</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.getSupportedMemoryPropertyFlags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the supported memory property flags for
-creating memories in this session.</p>
-<p>The length of the returned vector equals the number
-of Vulkan memory types available for the physical device
-this session was created from.</p>
-<p>See <a class="reference external" href="https://www.khronos.org/registry/vulkan/specs/1.0/html/vkspec.html#VkMemoryPropertyFlagBits">https://www.khronos.org/registry/vulkan/specs/1.0/html/vkspec.html#VkMemoryPropertyFlagBits</a>
-for more information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>supportedMemoryFlags</strong> – The supported memory property flags combinations supported
-by this session.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list of string lists</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">obj</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.run" title="Permalink to this definition">¶</a></dt>
-<dd><p>Runs a CommandBuffer or ComputeNode</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>obj</strong> (<a class="reference internal" href="CommandBuffer.html#lluvia.core.CommandBuffer" title="lluvia.core.CommandBuffer"><em>CommandBuffer</em></a><em> or </em><a class="reference internal" href="ComputeNode.html#lluvia.core.ComputeNode" title="lluvia.core.ComputeNode"><em>ComputeNode</em></a>) – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.script">
-<code class="sig-name descname">script</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode code</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.script" title="Permalink to this definition">¶</a></dt>
-<dd><p>Runs a Lua script in the session’s interpreter</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>code</strong> (<em>string</em>) – The Lua code.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.scriptFile">
-<code class="sig-name descname">scriptFile</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode filename</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.scriptFile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read and run a Lua script file in the session’s interpreter</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>code</strong> (<em>string</em>) – Path to the script file.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="lluvia.core.Session.setProgram">
-<code class="sig-name descname">setProgram</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode name</em>, <em class="sig-param">program</em><span class="sig-paren">)</span><a class="headerlink" href="#lluvia.core.Session.setProgram" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets a program into the registry with a given name</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>string</em>) – The name of the program in the registry.</p></li>
-<li><p><strong>program</strong> (<em>string</em><em> or </em><em>lluvia.Program.</em>) – If string, this parameter denotes a path to a SPIR-V file used to
-build the program. This is equivalent to call
-<cite>session.setProgram(name, session.createProgram(program))</cite></p></li>
-</ul>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>ValueError</strong> – if program’s type is not string nor lluvia.Program:</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
 </div>
 
 
@@ -532,29 +187,29 @@ build the program. This is equivalent to call
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../enumerations/index.html" class="btn btn-neutral float-right" title="Enumerations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="Program.html" class="btn btn-neutral float-left" title="Program" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="../enumerations/index.html" class="btn btn-neutral float-right" title="Enumerations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Program.html" class="btn btn-neutral float-left" title="Program" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Juan David Adarve Bermudez
+        &#169; Copyright 2020, Juan David Adarve Bermudez.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -562,7 +217,6 @@ build the program. This is equivalent to call
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

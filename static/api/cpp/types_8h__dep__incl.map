@@ -1,12 +1,13 @@
 <map id="lluvia/cpp/core/include/lluvia/core/types.h" name="lluvia/cpp/core/include/lluvia/core/types.h">
-<area shape="rect" id="node2" href="$ComputeNodeDescriptor_8h.html" title="ComputeNodeDescriptor class. " alt="" coords="5,184,249,225"/>
-<area shape="rect" id="node4" href="$core_8h.html" title="Lluvia single header for including core classes. " alt="" coords="459,363,609,404"/>
-<area shape="rect" id="node5" href="$ContainerNodeDescriptor_8h.html" title="ContainerNodeDescriptor class. " alt="" coords="327,184,573,225"/>
-<area shape="rect" id="node7" href="$Image_8h.html" title="Image class. " alt="" coords="597,184,748,225"/>
-<area shape="rect" id="node9" href="$ImageDescriptor_8h.html" title="ImageDescriptor class and related enumerations. " alt="" coords="688,95,884,136"/>
-<area shape="rect" id="node11" href="$utils_8h.html" title="utility functions. " alt="" coords="951,95,1101,136"/>
-<area shape="rect" id="node3" href="$ComputeNode_8h.html" title="ComputeNode class. " alt="" coords="15,273,199,315"/>
-<area shape="rect" id="node6" href="$ContainerNode_8h.html" title="lluvia/cpp/core/include\l/lluvia/core/ContainerNode.h" alt="" coords="375,273,562,315"/>
-<area shape="rect" id="node8" href="$ImageView_8h.html" title="ImageView class. " alt="" coords="637,273,802,315"/>
-<area shape="rect" id="node10" href="$Session_8h.html" title="Session class. " alt="" coords="877,273,1028,315"/>
+<area shape="rect" id="node1" title="Common types." alt="" coords="575,5,726,47"/>
+<area shape="rect" id="node2" href="$ComputeNodeDescriptor_8h.html" title="ComputeNodeDescriptor class." alt="" coords="5,184,248,225"/>
+<area shape="rect" id="node4" href="$core_8h.html" title="Lluvia single header for including core classes." alt="" coords="457,363,607,404"/>
+<area shape="rect" id="node5" href="$ContainerNodeDescriptor_8h.html" title="ContainerNodeDescriptor class." alt="" coords="322,184,569,225"/>
+<area shape="rect" id="node7" href="$Image_8h.html" title="Image class." alt="" coords="593,184,743,225"/>
+<area shape="rect" id="node9" href="$ImageDescriptor_8h.html" title="ImageDescriptor class and related enumerations." alt="" coords="688,95,883,136"/>
+<area shape="rect" id="node10" href="$Session_8h.html" title="Session class." alt="" coords="870,184,1021,225"/>
+<area shape="rect" id="node11" href="$utils_8h.html" title="utility functions." alt="" coords="979,95,1130,136"/>
+<area shape="rect" id="node3" href="$ComputeNode_8h.html" title="ComputeNode class." alt="" coords="13,273,197,315"/>
+<area shape="rect" id="node6" href="$ContainerNode_8h.html" title=" " alt="" coords="373,273,560,315"/>
+<area shape="rect" id="node8" href="$ImageView_8h.html" title="ImageView class." alt="" coords="635,273,797,315"/>
 </map>

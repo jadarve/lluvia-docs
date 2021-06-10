@@ -1,5 +1,6 @@
 <map id="lluvia/cpp/core/include/lluvia/core/impl/MemoryFreeSpaceManager.h" name="lluvia/cpp/core/include/lluvia/core/impl/MemoryFreeSpaceManager.h">
-<area shape="rect" id="node2" href="$Memory_8h.html" title="Memory class. " alt="" coords="61,109,212,151"/>
-<area shape="rect" id="node3" href="$Buffer_8h.html" title="Buffer class. " alt="" coords="5,199,156,240"/>
-<area shape="rect" id="node4" href="$core_8h.html" title="Lluvia single header for including core classes. " alt="" coords="61,288,212,329"/>
+<area shape="rect" id="node1" title="MemoryFreeSpaceManager class." alt="" coords="41,5,232,61"/>
+<area shape="rect" id="node2" href="$Memory_8h.html" title="Memory class." alt="" coords="61,109,212,151"/>
+<area shape="rect" id="node3" href="$Buffer_8h.html" title="Buffer class." alt="" coords="5,199,156,240"/>
+<area shape="rect" id="node4" href="$core_8h.html" title="Lluvia single header for including core classes." alt="" coords="61,288,212,329"/>
 </map>

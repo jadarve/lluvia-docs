@@ -1,9 +1,27 @@
 var searchData=
 [
-  ['record',['record',['../classll_1_1ComputeNode.html#a4d90d9fa77f184d690644e23fbc4efa3',1,'ll::ComputeNode::record()'],['../classll_1_1ContainerNode.html#a37e0d10acec345286096cfe5b829b752',1,'ll::ContainerNode::record()'],['../classll_1_1Node.html#a3bc0905cbd2f0598d4760dbf192b6ef3',1,'ll::Node::record()']]],
-  ['release',['release',['../classll_1_1impl_1_1MemoryFreeSpaceManager.html#a1d693e95a17fa7a27ed010cec3fe22f2',1,'ll::impl::MemoryFreeSpaceManager']]],
-  ['repeat',['Repeat',['../namespacell.html#a1231a63269df4e508ab8b0257b01b7a9a7020426cfb0a204051be4b3053d2acc8',1,'ll']]],
-  ['reservemanagerspace',['reserveManagerSpace',['../classll_1_1impl_1_1MemoryFreeSpaceManager.html#a3a4c2a7e7dfc893de70ecaff030db309',1,'ll::impl::MemoryFreeSpaceManager']]],
-  ['run',['run',['../classll_1_1CommandBuffer.html#a25d980f57b6491c97bc8580daf8a6c18',1,'ll::CommandBuffer::run()'],['../classll_1_1Interpreter.html#a85595ccff2e9150a90ce3135ce10f170',1,'ll::Interpreter::run()'],['../classll_1_1Session.html#aacdcdcb38667a6ea8ebaa8e6d27dc7aa',1,'ll::Session::run(const ll::CommandBuffer &amp;cmdBuffer)'],['../classll_1_1Session.html#af27683f9d5054e4d0aabbd74eb6a64f4',1,'ll::Session::run(const ll::ComputeNode &amp;node)'],['../classll_1_1Session.html#ae5d3592bcd43771e8240d37f2e74d9a8',1,'ll::Session::run(const ll::ContainerNode &amp;node)'],['../classll_1_1vulkan_1_1Device.html#a4b7d9334ea429f4c91ba6dd142c06c98',1,'ll::vulkan::Device::run()']]],
-  ['runfile',['runFile',['../classll_1_1Interpreter.html#acdf50d80ecc38318dfc69e9b3766a3d9',1,'ll::Interpreter']]]
+  ['page_279',['page',['../structll_1_1MemoryAllocationInfo.html#a555f5edffafc05fa16c0b23e0ca949f6',1,'ll::MemoryAllocationInfo']]],
+  ['parameter_280',['Parameter',['../classll_1_1Parameter.html',1,'ll::Parameter'],['../classll_1_1Parameter.html#a9017b72211ef4f0e0ac9b732d2abf6e0',1,'ll::Parameter::Parameter()=default'],['../classll_1_1Parameter.html#af9d4f6dc12ee964752434f465302e622',1,'ll::Parameter::Parameter(const Parameter &amp;)=default'],['../classll_1_1Parameter.html#aeee4451fd1438b90e10b35de3a767be2',1,'ll::Parameter::Parameter(Parameter &amp;&amp;)=default'],['../classll_1_1Parameter.html#abffd90701f7876cccf1302f80db600f3',1,'ll::Parameter::Parameter(ParameterType type)']]],
+  ['parameter_2eh_281',['Parameter.h',['../Parameter_8h.html',1,'']]],
+  ['parametertype_282',['ParameterType',['../namespacell.html#ae8af1d470ae6b373491769efc75ea9b2',1,'ll']]],
+  ['parametertypestrings_283',['ParameterTypeStrings',['../namespacell_1_1impl.html#ae2bd43b154e8c0277695d9f389b0aeed',1,'ll::impl']]],
+  ['physicaldevicesnotfound_284',['PhysicalDevicesNotFound',['../namespacell.html#a7e8c8f966a57cde81fd2d2e8d2e0d219a737b1adc29711de5ddf1eff9a1818614',1,'ll']]],
+  ['pipelinecreationerror_285',['PipelineCreationError',['../namespacell.html#a7e8c8f966a57cde81fd2d2e8d2e0d219ae8cc8f3c0d652c5925f9bd0abd89fcb6',1,'ll']]],
+  ['portbindingerror_286',['PortBindingError',['../namespacell.html#a7e8c8f966a57cde81fd2d2e8d2e0d219a3e57c5fae35084ce6381be8b378e5242',1,'ll']]],
+  ['portdescriptor_287',['PortDescriptor',['../structll_1_1PortDescriptor.html',1,'ll::PortDescriptor'],['../structll_1_1PortDescriptor.html#a65a0c3f14ed13c85a9ed223c85508e22',1,'ll::PortDescriptor::PortDescriptor()'],['../structll_1_1PortDescriptor.html#a718ca9b65b7a72ea70cdccf12c4285bd',1,'ll::PortDescriptor::PortDescriptor(uint32_t pBinding, const std::string &amp;pName, ll::PortDirection pDirection, ll::PortType pType)']]],
+  ['portdirection_288',['PortDirection',['../namespacell.html#a71e440852ceb89bc38e9a637288698c8',1,'ll']]],
+  ['portdirectionstrings_289',['PortDirectionStrings',['../namespacell_1_1impl.html#ab9f280f54583de93638886aaa6563be6',1,'ll::impl']]],
+  ['porttype_290',['PortType',['../namespacell.html#abc4bbc92dd7ac3c06176abcc214554fe',1,'ll']]],
+  ['porttypestrings_291',['PortTypeStrings',['../namespacell_1_1impl.html#af0be8bacd2909f6df105e16012f2a1c2',1,'ll::impl']]],
+  ['porttypetostring_292',['portTypeToString',['../namespacell.html#ad1072cd0d4174edc6bcd4879e339d571',1,'ll']]],
+  ['porttypetovkdescriptortype_293',['portTypeToVkDescriptorType',['../namespacell.html#a7809eca05fee10886852a9cc7f0c2c8a',1,'ll']]],
+  ['program_294',['Program',['../classll_1_1Program.html',1,'ll::Program'],['../classll_1_1Program.html#ac118dfc859b0ddb69c5d614fc1eba951',1,'ll::Program::Program()=delete'],['../classll_1_1Program.html#ae914284163dab9ea084979b65e7da1e1',1,'ll::Program::Program(const Program &amp;program)=delete'],['../classll_1_1Program.html#aaee66a8955cacd43e9f18ce49a915555',1,'ll::Program::Program(Program &amp;&amp;program)=delete'],['../classll_1_1Program.html#a963bca9caab30b19e10a47e8977f4420',1,'ll::Program::Program(const std::shared_ptr&lt; ll::vulkan::Device &gt; &amp;device, const std::vector&lt; uint8_t &gt; &amp;spirvCode)']]],
+  ['program_2eh_295',['Program.h',['../Program_8h.html',1,'']]],
+  ['programcompilationerror_296',['ProgramCompilationError',['../namespacell.html#a7e8c8f966a57cde81fd2d2e8d2e0d219a14453f9ce99ea74ccde1c9d60800a1c6',1,'ll']]],
+  ['push_297',['push',['../classll_1_1PushConstants.html#af03a968eb0b9fc700d1a28c7af1babb9',1,'ll::PushConstants']]],
+  ['pushconstanterror_298',['PushConstantError',['../namespacell.html#a7e8c8f966a57cde81fd2d2e8d2e0d219a6bae26c0d2abf1bd4b383e8de32598ee',1,'ll']]],
+  ['pushconstants_299',['PushConstants',['../classll_1_1PushConstants.html',1,'ll::PushConstants'],['../classll_1_1PushConstants.html#a7ec451cd0849de5c127614a26fb24226',1,'ll::PushConstants::PushConstants()=default'],['../classll_1_1PushConstants.html#a1275d1f83845f1de94d9f8b4b001e544',1,'ll::PushConstants::PushConstants(const PushConstants &amp;)=default'],['../classll_1_1PushConstants.html#a7a74a688b8057deee8deb518a2bd26ce',1,'ll::PushConstants::PushConstants(PushConstants &amp;&amp;)=default']]],
+  ['pushconstants_2eh_300',['PushConstants.h',['../PushConstants_8h.html',1,'']]],
+  ['pushfloat_301',['pushFloat',['../classll_1_1PushConstants.html#a5d934ac8805ec39b1b277a5499feabc6',1,'ll::PushConstants']]],
+  ['pushint32_302',['pushInt32',['../classll_1_1PushConstants.html#af358bd082bae4a528255aab26524a0e4',1,'ll::PushConstants']]]
 ];

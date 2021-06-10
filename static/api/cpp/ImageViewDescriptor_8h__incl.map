@@ -1,3 +1,13 @@
 <map id="lluvia/cpp/core/include/lluvia/core/ImageViewDescriptor.h" name="lluvia/cpp/core/include/lluvia/core/ImageViewDescriptor.h">
-<area shape="rect" id="node2" href="$enum__utils_8h.html" title="Utility methods to manipulate enumerations. " alt="" coords="226,95,371,136"/>
+<area shape="rect" id="node1" title="ImageViewDescriptor class and related enumerations and methods." alt="" coords="295,5,519,47"/>
+<area shape="rect" id="node2" href="$enum__utils_8h.html" title="Utility methods to manipulate enumerations." alt="" coords="279,95,425,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,184,56,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="80,184,141,211"/>
+<area shape="rect" id="node7" title=" " alt="" coords="543,184,598,211"/>
+<area shape="rect" id="node8" title=" " alt="" coords="623,184,673,211"/>
+<area shape="rect" id="node11" href="$vulkan_8hpp.html" title=" " alt="" coords="551,95,673,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="165,184,240,211"/>
+<area shape="rect" id="node6" title=" " alt="" coords="265,184,343,211"/>
+<area shape="rect" id="node9" title=" " alt="" coords="367,184,435,211"/>
+<area shape="rect" id="node10" title=" " alt="" coords="460,184,519,211"/>
 </map>
