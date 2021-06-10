@@ -2,9 +2,9 @@
 
 npm config set prefix="${HOME}/npm"
 
+npm install -g postcss
 npm install -g postcss-cli
-npm install autoprefixer
-npm audit fix
+npm install -g autoprefixer
 
 export PATH=~/node_modules/.bin:$PATH
 
