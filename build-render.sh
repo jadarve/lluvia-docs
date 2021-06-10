@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-npm install postcss-cli
+npm install -g postcss-cli
 npm install autoprefixer
 
 export PATH=~/node_modules/.bin:$PATH
