@@ -1,5 +1,6 @@
 <map id="lluvia/cpp/core/include/lluvia/core/PushConstants.h" name="lluvia/cpp/core/include/lluvia/core/PushConstants.h">
-<area shape="rect" id="node2" href="$ComputeNodeDescriptor_8h.html" title="ComputeNodeDescriptor class. " alt="" coords="5,95,249,136"/>
-<area shape="rect" id="node4" href="$core_8h.html" title="Lluvia single header for including core classes. " alt="" coords="161,273,312,315"/>
-<area shape="rect" id="node3" href="$ComputeNode_8h.html" title="ComputeNode class. " alt="" coords="15,184,199,225"/>
+<area shape="rect" id="node1" title="PushConstants class." alt="" coords="110,5,301,47"/>
+<area shape="rect" id="node2" href="$ComputeNodeDescriptor_8h.html" title="ComputeNodeDescriptor class." alt="" coords="5,95,248,136"/>
+<area shape="rect" id="node4" href="$core_8h.html" title="Lluvia single header for including core classes." alt="" coords="159,273,310,315"/>
+<area shape="rect" id="node3" href="$ComputeNode_8h.html" title="ComputeNode class." alt="" coords="13,184,197,225"/>
 </map>

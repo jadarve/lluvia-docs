@@ -4,5 +4,8 @@ var dir_56380ee61975d35702346b4de2da1e6d =
     [ "MemoryFreeSpaceManager.h", "MemoryFreeSpaceManager_8h.html", [
       [ "MemoryAllocationTryInfo", "structll_1_1impl_1_1MemoryAllocationTryInfo.html", "structll_1_1impl_1_1MemoryAllocationTryInfo" ],
       [ "MemoryFreeSpaceManager", "classll_1_1impl_1_1MemoryFreeSpaceManager.html", "classll_1_1impl_1_1MemoryFreeSpaceManager" ]
+    ] ],
+    [ "ZipArchive.h", "ZipArchive_8h.html", [
+      [ "ZipArchive", "classll_1_1impl_1_1ZipArchive.html", "classll_1_1impl_1_1ZipArchive" ]
     ] ]
 ];

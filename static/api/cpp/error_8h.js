@@ -21,12 +21,16 @@ var error_8h =
       [ "PushConstantError", "error_8h.html#a7e8c8f966a57cde81fd2d2e8d2e0d219a6bae26c0d2abf1bd4b383e8de32598ee", null ],
       [ "IOError", "error_8h.html#a7e8c8f966a57cde81fd2d2e8d2e0d219a5206bd7472156351d2d9a99633ac9580", null ],
       [ "InvalidArgument", "error_8h.html#a7e8c8f966a57cde81fd2d2e8d2e0d219a253ca7dd096ee0956cccee4d376cab8b", null ],
-      [ "InconpatibleDriver", "error_8h.html#a7e8c8f966a57cde81fd2d2e8d2e0d219aef45dc3a36da7fe07f331afa4330f208", null ],
-      [ "SessionLost", "error_8h.html#a7e8c8f966a57cde81fd2d2e8d2e0d219a22bf1a4d7abe40178831d3c1faf99b54", null ]
+      [ "InstanceCreationError", "error_8h.html#a7e8c8f966a57cde81fd2d2e8d2e0d219a6d352b645612ab602ca1ce13f47dedf3", null ],
+      [ "SessionLost", "error_8h.html#a7e8c8f966a57cde81fd2d2e8d2e0d219a22bf1a4d7abe40178831d3c1faf99b54", null ],
+      [ "LayerNotFound", "error_8h.html#a7e8c8f966a57cde81fd2d2e8d2e0d219a2e6fc58c55f2bb7c5b3653673fdf4fbd", null ],
+      [ "ExtensionNotFound", "error_8h.html#a7e8c8f966a57cde81fd2d2e8d2e0d219a57ebb20495fbd21690127a155537a163", null ],
+      [ "PipelineCreationError", "error_8h.html#a7e8c8f966a57cde81fd2d2e8d2e0d219ae8cc8f3c0d652c5925f9bd0abd89fcb6", null ],
+      [ "VulkanError", "error_8h.html#a7e8c8f966a57cde81fd2d2e8d2e0d219a4c24679109b687a11d336f5347fea4f2", null ]
     ] ],
     [ "createErrorCode", "error_8h.html#ae052844ef951c56c69e98b7aa8b79b33", null ],
     [ "errorCodeToString", "error_8h.html#a58c2e0ab4e8fd702ae39df9315c3473a", null ],
     [ "throwSystemError", "error_8h.html#a940c7361e550cccb56aac17d4ec4adaa", null ],
     [ "throwSystemErrorIf", "error_8h.html#a68e3e175f88faa87be6809a4636842e4", null ],
-    [ "ErrorCodeStrings", "error_8h.html#a8361e30a96cd0e1ab8afcbeec51321f7", null ]
+    [ "ErrorCodeStrings", "error_8h.html#a1e2434ab5589626f52049145fd42cd15", null ]
 ];

@@ -30,10 +30,7 @@ cd ../../../../lluvia-docs
 rsync -av ../lluvia/lluvia/python/doc/build/html/ static/api/python
 
 # install Docsy dependencies
-npm install postcss-cli
-npm install autoprefixer
-
-export PATH=~/node_modules/.bin:$PATH
+npm install
 
 # generate site
 git submodule update --init --recursive --depth 1

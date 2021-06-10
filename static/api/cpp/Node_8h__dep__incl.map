@@ -1,7 +1,8 @@
 <map id="lluvia/cpp/core/include/lluvia/core/Node.h" name="lluvia/cpp/core/include/lluvia/core/Node.h">
-<area shape="rect" id="node2" href="$ComputeNode_8h.html" title="ComputeNode class. " alt="" coords="33,184,217,225"/>
-<area shape="rect" id="node3" href="$core_8h.html" title="Lluvia single header for including core classes. " alt="" coords="179,273,330,315"/>
-<area shape="rect" id="node4" href="$ComputeNodeDescriptor_8h.html" title="ComputeNodeDescriptor class. " alt="" coords="84,95,328,136"/>
-<area shape="rect" id="node5" href="$ContainerNode_8h.html" title="lluvia/cpp/core/include\l/lluvia/core/ContainerNode.h" alt="" coords="292,184,478,225"/>
-<area shape="rect" id="node6" href="$ContainerNodeDescriptor_8h.html" title="ContainerNodeDescriptor class. " alt="" coords="403,95,650,136"/>
+<area shape="rect" id="node1" title="Node class and related enums." alt="" coords="130,5,280,47"/>
+<area shape="rect" id="node2" href="$ComputeNode_8h.html" title="ComputeNode class." alt="" coords="33,184,217,225"/>
+<area shape="rect" id="node3" href="$core_8h.html" title="Lluvia single header for including core classes." alt="" coords="179,273,330,315"/>
+<area shape="rect" id="node4" href="$ComputeNodeDescriptor_8h.html" title="ComputeNodeDescriptor class." alt="" coords="84,95,326,136"/>
+<area shape="rect" id="node5" href="$ContainerNode_8h.html" title=" " alt="" coords="292,184,478,225"/>
+<area shape="rect" id="node6" href="$ContainerNodeDescriptor_8h.html" title="ContainerNodeDescriptor class." alt="" coords="400,95,647,136"/>
 </map>

@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['u',['U',['../namespacell.html#aeddd4b4b0ff896474679543d8e7ab020a4c614360da93c0a041b22e537de151eb',1,'ll']]],
-  ['uint16',['Uint16',['../namespacell.html#a6514c68744b38056c6785915c6d0bebba3167337450665ae9b3b34004d33cafe8',1,'ll']]],
-  ['uint32',['Uint32',['../namespacell.html#a6514c68744b38056c6785915c6d0bebba2f3a46e0add3a07937412cbeb8f95727',1,'ll']]],
-  ['uint64',['Uint64',['../namespacell.html#a6514c68744b38056c6785915c6d0bebbac970503874fb72afdf908cb54a4c10ee',1,'ll']]],
-  ['uint8',['Uint8',['../namespacell.html#a6514c68744b38056c6785915c6d0bebba3a33b05b1fe0bad48ad87ffbacdddd15',1,'ll']]],
-  ['utils_2eh',['utils.h',['../utils_8h.html',1,'']]]
+  ['throwsystemerror_358',['throwSystemError',['../namespacell.html#a940c7361e550cccb56aac17d4ec4adaa',1,'ll']]],
+  ['throwsystemerrorif_359',['throwSystemErrorIf',['../namespacell.html#a68e3e175f88faa87be6809a4636842e4',1,'ll']]],
+  ['tobase64_360',['toBase64',['../namespacell.html#a7d7c793aeb3145849fd9c5852b4cd76d',1,'ll']]],
+  ['tryallocate_361',['tryAllocate',['../classll_1_1impl_1_1MemoryFreeSpaceManager.html#ac9e07fab9ad9d1b73cf4639528c77005',1,'ll::impl::MemoryFreeSpaceManager::tryAllocate(uint64_t tSize, ll::impl::MemoryAllocationTryInfo &amp;tryInfoOut) noexcept'],['../classll_1_1impl_1_1MemoryFreeSpaceManager.html#ab9b09b058af899448ce18caf49d02102',1,'ll::impl::MemoryFreeSpaceManager::tryAllocate(uint64_t tSize, uint64_t alignment, ll::impl::MemoryAllocationTryInfo &amp;tryInfoOut) noexcept']]],
+  ['type_362',['type',['../structll_1_1PortDescriptor.html#a9cebea771a2d74de15418a09e59dbb18',1,'ll::PortDescriptor']]],
+  ['typeindex_363',['typeIndex',['../structll_1_1VkHeapInfo.html#a9345300df9249abd10397b8785e6813d',1,'ll::VkHeapInfo']]],
+  ['types_2eh_364',['types.h',['../types_8h.html',1,'']]]
 ];

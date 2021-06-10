@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['buffer',['Buffer',['../classll_1_1Buffer.html',1,'ll']]],
-  ['buffermapdeleter',['BufferMapDeleter',['../structll_1_1Buffer_1_1BufferMapDeleter.html',1,'ll::Buffer']]]
+  ['buffer_421',['Buffer',['../classll_1_1Buffer.html',1,'ll']]],
+  ['buffermapdeleter_422',['BufferMapDeleter',['../structll_1_1Buffer_1_1BufferMapDeleter.html',1,'ll::Buffer']]]
 ];

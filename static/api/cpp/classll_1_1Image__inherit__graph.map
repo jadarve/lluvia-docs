@@ -1,3 +1,5 @@
 <map id="ll::Image" name="ll::Image">
-<area shape="rect" id="node2" href="$classll_1_1Object.html" title="Base class for all types that can be used in computer shaders. " alt="" coords="5,13,80,39"/>
+<area shape="rect" id="node1" title="Objects to manage images." alt="" coords="76,95,148,121"/>
+<area shape="rect" id="node2" href="$classll_1_1Object.html" title="Base class for all types that can be used in computer shaders." alt="" coords="5,13,80,39"/>
+<area shape="rect" id="node3" title=" " alt="" coords="104,5,261,47"/>
 </map>

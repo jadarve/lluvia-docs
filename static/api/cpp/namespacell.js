@@ -24,6 +24,7 @@ var namespacell =
     [ "Program", "classll_1_1Program.html", "classll_1_1Program" ],
     [ "PushConstants", "classll_1_1PushConstants.html", "classll_1_1PushConstants" ],
     [ "Session", "classll_1_1Session.html", "classll_1_1Session" ],
+    [ "SessionDescriptor", "classll_1_1SessionDescriptor.html", "classll_1_1SessionDescriptor" ],
     [ "vec3", "structll_1_1vec3.html", "structll_1_1vec3" ],
     [ "VkHeapInfo", "structll_1_1VkHeapInfo.html", "structll_1_1VkHeapInfo" ]
 ];
