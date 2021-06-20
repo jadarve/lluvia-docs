@@ -23,7 +23,28 @@ for n, memflags in enumerate(session.getSupportedMemoryPropertyFlags()):
     print()
 {{< /tab >}}
 {{< tab header="C++" lang="c++">}}
-// TODO
+#include <iostream>
+#include "lluvia/core.h"
+
+#include <vulkan/vulkan.hpp>
+
+int main() {
+    
+    ll::SessionDescriptor desc = ll::SessionDescriptor().enableDebug(true);
+
+    std::shared_ptr<ll::Session> session = ll::Session::create(desc);
+
+    std::vector<vk::MemoryPropertyFlags> flagsVector = session->getSupportedMemoryFlags();
+
+    for(int i = 0; i < flagsVector.size(); ++i) {
+        const vk::MemoryPropertyFlags &flags = flagsVector[i];
+        
+        std::cout << "Memory index: " << i << std::endl;
+        std::cout << "    Supported flags: " << vk::to_string(flags) << std::endl;
+    }
+
+    return 0;
+}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -73,16 +94,34 @@ import lluvia as ll
 
 session = ll.createSession(enableDebug=True)
 
-devMemory = session.createMemory(ll.MemoryPropertyFlagBits.DeviceLocal, pageSize=32*1024*1024, exactFlagsMatch=False)
+deviceMemory = session.createMemory(ll.MemoryPropertyFlagBits.DeviceLocal, pageSize=32*1024*1024, exactFlagsMatch=False)
 
+# use default page size
 hostMemory = session.createMemory([ll.MemoryPropertyFlagBits.DeviceLocal,
                                    ll.MemoryPropertyFlagBits.HostVisible,
                                    ll.MemoryPropertyFlagBits.HostCoherent])
 {{< /tab >}}
 {{< tab header="C++" lang="c++">}}
-auto devMemory  = session->createMemory(vk::MemoryPropertyFlagBits::eDeviceLocal);
-auto hostMemory = session->createMemory(vk::MemoryPropertyFlagBits::eHostVisible |
-                                        vk::MemoryPropertyFlagBits::eHostCoheren
+#include "lluvia/core.h"
+#include <vulkan/vulkan.hpp>
+#include <iostream>
+#include <memory>
+
+int main() {
+
+    auto session = ll::Session::create(ll::SessionDescriptor().enableDebug(true));
+    
+    const vk::MemoryPropertyFlags deviceFlags = vk::MemoryPropertyFlagBits::eDeviceLocal;
+    const vk::MemoryPropertyFlags hostFlags = vk::MemoryPropertyFlagBits::eDeviceLocal |
+                                              vk::MemoryPropertyFlagBits::eHostVisible |
+                                              vk::MemoryPropertyFlagBits::eHostCoherent;
+
+    std::shared_ptr<ll::Memory> deviceMemory = session->createMemory(deviceFlags, 32*1024*1024, false);
+
+    std::shared_ptr<ll::Memory> hostMemory = session->createMemory(hostFlags, 32*1024*1024, false);
+
+    return 0;
+}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -122,7 +161,10 @@ print('pageCount  :', hostMemory.pageCount)
 print('pageSize   :', hostMemory.pageSize)
 {{< /tab >}}
 {{< tab header="C++" lang="c++">}}
-// TODO
+std::cout << "flags      : " << vk::to_string(hostMemory->getMemoryPropertyFlags()) << std::endl;
+std::cout << "isMappable : " << hostMemory->isMappable() << std::endl;
+std::cout << "pageCount  : " << hostMemory->getPageCount() << std::endl;
+std::cout << "pageSize   : " << hostMemory->getPageSize() << std::endl;
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -157,11 +199,17 @@ The code block below shows how to allocate a buffer and an image object. Each al
 
 {{< tabpane >}}
 {{< tab header="Python" lang="python">}}
+import lluvia as ll
+
+session = ll.createSession(enableDebug=True)
+
+deviceMemory = session.createMemory(ll.MemoryPropertyFlagBits.DeviceLocal, pageSize=32*1024*1024)
+
 # A 1024 byte size buffer
-buffer = devMemory.createBuffer(1024)
+buffer = deviceMemory.createBuffer(1024)
 
 # A 32x32 pixels image where each pixel is of type Uint8
-image = devMemory.createImage((32, 32), ll.ChannelType.Uint8)
+image = deviceMemory.createImage((32, 32), ll.ChannelType.Uint8)
 
 print('buffer:')
 print('  page         :', buffer.allocationInfo.page)
@@ -177,7 +225,37 @@ print('  left padding :', image.allocationInfo.leftPadding)
 print('  size         :', image.allocationInfo.size)
 {{< /tab >}}
 {{< tab header="C++" lang="c++">}}
-// TODO
+#include "lluvia/core.h"
+#include <vulkan/vulkan.hpp>
+#include <iostream>
+#include <memory>
+
+int main() {
+    auto session = ll::Session::create(ll::SessionDescriptor().enableDebug(true));
+    
+    const vk::MemoryPropertyFlags deviceFlags = vk::MemoryPropertyFlagBits::eDeviceLocal;
+
+    std::shared_ptr<ll::Memory> deviceMemory = session->createMemory(deviceFlags, 32*1024*1024, false);
+    
+    std::shared_ptr<ll::Buffer> buffer = deviceMemory->createBuffer(1024);
+    
+    // 32x32 image with one uint8 color channel per pixel
+    ll::ImageDescriptor desc = ll::ImageDescriptor(1, 32, 32, ll::ChannelCount::C1, ll::ChannelType::Uint8);
+    std::shared_ptr<ll::Image> image = deviceMemory->createImage(desc);
+    
+    std::cout << "buffer:" << std::endl;
+    std::cout << "  page         : " << buffer->getAllocationInfo().page << std::endl;
+    std::cout << "  offset       : " << buffer->getAllocationInfo().offset << std::endl;
+    std::cout << "  left padding : " << buffer->getAllocationInfo().leftPadding << std::endl;
+    std::cout << "  size         : " << buffer->getAllocationInfo().size << std::endl;
+
+    std::cout << std::endl;
+    std::cout << "image:" << std::endl;
+    std::cout << "  page         : " << image->getAllocationInfo().page << std::endl;
+    std::cout << "  offset       : " << image->getAllocationInfo().offset << std::endl;
+    std::cout << "  left padding : " << image->getAllocationInfo().leftPadding << std::endl;
+    std::cout << "  size         : " << image->getAllocationInfo().size << std::endl;
+}
 {{< /tab >}}
 {{< /tabpane >}}
 
