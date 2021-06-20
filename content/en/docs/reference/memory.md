@@ -9,7 +9,7 @@ Memory objects represent regions of memory that can be used to allocate objects.
 
 ## Memory types
 
-Memory objects are created from a Lluvia `Session`. The code block below enumerate the available memory options:
+Memory objects are created from a Lluvia `Session`. The [code block](https://github.com/jadarve/lluvia/blob/master/samples/lluvia-docs/memory/test_enumerateMemories.cpp) below enumerate the available memory options:
 
 {{< tabpane >}}
 {{< tab header="Python" lang="python">}}
@@ -86,7 +86,7 @@ For Lluvia, the two most important memory flag tuples are:
 
 ## Creation
 
-The code block below shows how to create memory objects:
+The [code block](https://github.com/jadarve/lluvia/blob/master/samples/lluvia-docs/memory/test_createMemory.cpp) below shows how to create memory objects:
 
 {{< tabpane >}}
 {{< tab header="Python" lang="python">}}
@@ -195,7 +195,7 @@ graph
     click Image "/docs/reference/image" "Image"
 ```
 
-The code block below shows how to allocate a buffer and an image object. Each allocated object has an `allocationInfo` to see the allocation values.
+The [code block](https://github.com/jadarve/lluvia/blob/master/samples/lluvia-docs/memory/test_createObjects.cpp) below shows how to allocate a buffer and an image object. Each allocated object has an `allocationInfo` to see the allocation values.
 
 {{< tabpane >}}
 {{< tab header="Python" lang="python">}}
