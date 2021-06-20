@@ -10,8 +10,6 @@ Designing and developing real-time Computer Vision algorithms is a difficult tas
 
 Lluvia has been designed around the idea of reducing the effort for designing and implementing Computer Vision algorithms for real-time applications. The engine is built on top the [Vulkan graphics and compute API](https://www.khronos.org/vulkan/). By using Vulkan, it is possible to run the algorithms on any modern GPU that supports the API. The core libraries are coded in C++ and can be compiled for several operating systems, currently Linux and Android. Wrappers for high-level languages such as Python are maintained as well.
 
-{{< youtube mRZ6YdWb8fE >}}
-
 ## Workflow
 
 Lluvia uses a compute graph to organize and schedule computations on the GPU. The development workflow circles around coding and debugging nodes in such a graph until the whole algorithm is built:
